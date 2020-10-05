@@ -3,34 +3,36 @@
 //Les constructeurs
 CPoint::CPoint()
 {
-	setnX(0);
-	setnY(0);
+	this->setnX(0);
+	this->setnY(0);
+	this->m_strType = "pivot";
 }
 
-CPoint::CPoint(int nX, int nY)
+CPoint::CPoint(int nX, int nY, string m_strType)
 {
-	setnX(nX);
-	setnY(nY);
+	this->setnX(nX);
+	this->setnY(nY);
+	this->m_strType = m_strType;
 }
 
 //Accesseurs
 int CPoint::getnX() const
 {
-	return m_nX;
+	return this->m_nX;
 }
 
 int CPoint::getnY() const
 {
-	return m_nY;
+	return this->m_nY;
 }
 
 //Mutateurs
 void CPoint::setnX(int n_val)
 {
-	m_nX = n_val;
+	this->m_nX = n_val;
 }
 
 void CPoint::setnY(int n_val)
 {
-	m_nY = n_val;
+	this->m_nY = n_val;
 }

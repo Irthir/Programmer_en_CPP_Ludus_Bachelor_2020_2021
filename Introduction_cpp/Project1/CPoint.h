@@ -1,8 +1,10 @@
 #ifndef CPOINT_H
 #define CPOINT_H
-
-
 #pragma once
+
+#include <string>
+using namespace std;
+
 class CPoint
 //DEFINITION : Ceci est un point avec deux entiers représentants sa position dans un plan 2D.
 {
@@ -12,9 +14,11 @@ private:
 	int m_nY;
 
 public:
+	std::string m_strType;
+
 	//Constructeurs
 	CPoint();
-	CPoint(int nX, int nY);
+	CPoint(int nX, int nY, string m_strType);
 	//fonctions membres
 	void affichePoint() const;
 
