@@ -1,22 +1,26 @@
-#include <stdio.h>
-#include <iostream>
-#include "tPoint.h"
+#include "CPoint.h"
 using namespace std;
 
 int main()
 {
+	/*
 	printf("Hello World\n");
 
 	tPoint pPoint;
 
-	pPoint.nX = 4;
-	pPoint.nY = 1;
+	pPoint.m_nX = 4;
+	pPoint.m_nY = 1;
 
-	/*cin >> pPoint.nX; //cin est l'équivalent de scanf en C++, cependant il récupère une valeur non typée.
-	cin >> pPoint.nY;*/
+	//cin >> pPoint.nX; //cin est l'équivalent de scanf en C++, cependant il récupère une valeur non typée.
+	//cin >> pPoint.nY;
 
 
-	affichePoint(pPoint); //Note : Penser aux normes de programmations MVC.
+	pPoint.affichePoint(pPoint); //Note : Penser aux normes de programmations MVC.*/
+
+	CPoint pPoint;
+
+	//Appel de la méthode publique affichePoint()
+	pPoint.affichePoint();
 
 	return 0;
 }
