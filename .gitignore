@@ -33,3 +33,6 @@
 
 #Dossier de configuration
 *.vs
+
+*/[Dd]ebug
+*/[Rr]elease
