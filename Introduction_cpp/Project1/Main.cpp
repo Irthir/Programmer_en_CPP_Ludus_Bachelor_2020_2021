@@ -8,22 +8,21 @@ void EchangePoints(CPoint* pPoint, CPoint* pPoint1);
 
 const int TAILLE = 100;
 
-int main()	
+int main()
 {
 	//Création
 	CPoint pPoing;
 
-	CPoint pPoint(8,9,"Patate");
-	
+	CPoint pPoint(8, 9, "Patate");
 
-	CPoint *tabPoint=new CPoint[TAILLE];//malloc(100*sizeof(CPoint));
+
+	CPoint* tabPoint = new CPoint[TAILLE];//malloc(100*sizeof(CPoint));
 
 	//CPoint **tabPoint2 = new CPoint*[TAILLE];
 
 	for (int i = 0; i < 100;i++)
 		tabPoint[i] = pPoint;
 
-	//delete[]tabPoint;
 
 	cout << "Mon point a pour position : X = "<< pPoint.getnX() << " Y = "<< pPoint.getnY() << " et pour type : "<< pPoint.getstrType() << "." << endl;
 
@@ -41,6 +40,7 @@ int main()
 	cout << "Mon point 1 a pour position : X = " << pPoint.getnX() << " Y = " << pPoint.getnY() << " et pour type : " << pPoint.getstrType() << "." << endl;
 	cout << "Mon point 2 a pour position : X = " << pPoing.getnX() << " Y = " << pPoing.getnY() << " et pour type : " << pPoing.getstrType() << "." << endl;
 
+	cout << "nCompteur = " << pPoint.val_Compteur() << endl;
 
 	return 0;
 }

@@ -1,6 +1,7 @@
 #include "CPoint.h"
 #include <string>
 
+int CPoint::nCompteur = 0;
 //Les constructeurs
 CPoint::CPoint(int nX,int nY)
 {
@@ -8,6 +9,7 @@ CPoint::CPoint(int nX,int nY)
 	this->setnY(nY);
 	this->m_strType = new char[100];
 	strcpy_s(this->m_strType,100, "Defaut");
+	nCompteur++;
 }
 
 CPoint::CPoint(int nX, int nY, const char* m_strType)
@@ -16,11 +18,13 @@ CPoint::CPoint(int nX, int nY, const char* m_strType)
 	this->setnY(nY);
 	this->m_strType = new char[100];
 	strcpy_s(this->m_strType,100, m_strType);
+	nCompteur++;
 }
 
 CPoint::~CPoint()
 {
 	delete[] m_strType;
+	nCompteur--;
 }
 
 void CPoint::deplacePoint(int nX, int nY)
@@ -67,4 +71,9 @@ void CPoint::setnX(int n_val)
 void CPoint::setnY(int n_val)
 {
 	this->m_nY = n_val;
+}
+
+int CPoint::val_Compteur()
+{
+	return nCompteur;
 }

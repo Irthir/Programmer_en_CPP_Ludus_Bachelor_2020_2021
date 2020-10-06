@@ -13,6 +13,7 @@ private:
 	int m_nX;
 	int m_nY;
 	char* m_strType;
+	static int nCompteur;
 
 public:
 
@@ -39,6 +40,8 @@ public:
 	//Mutateurs
 	void setnX(int n_val);
 	void setnY(int n_val);
+
+	int static val_Compteur();
 
 };
 
