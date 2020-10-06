@@ -1,18 +1,26 @@
 #include "CPoint.h"
+#include <string>
 
 //Les constructeurs
 CPoint::CPoint(int nX,int nY)
 {
 	this->setnX(nX);
 	this->setnY(nY);
-	this->m_strType = "Defaut";
+	this->m_strType = new char[100];
+	strcpy_s(this->m_strType,100, "Defaut");
 }
 
-CPoint::CPoint(int nX, int nY, string m_strType)
+CPoint::CPoint(int nX, int nY, const char* m_strType)
 {
 	this->setnX(nX);
 	this->setnY(nY);
-	this->m_strType = m_strType;
+	this->m_strType = new char[100];
+	strcpy_s(this->m_strType,100, m_strType);
+}
+
+CPoint::~CPoint()
+{
+	delete[] m_strType;
 }
 
 void CPoint::deplacePoint(int nX, int nY)

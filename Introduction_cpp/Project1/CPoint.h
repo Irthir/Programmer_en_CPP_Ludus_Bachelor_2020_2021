@@ -12,13 +12,16 @@ private:
 	//Données membres
 	int m_nX;
 	int m_nY;
-	std::string m_strType;
+	char* m_strType;
 
 public:
 
 	//Constructeurs
 	CPoint(int nX=0,int nY=0);
-	CPoint(int nX, int nY, string m_strType);
+	CPoint(int nX, int nY,const char* m_strType);
+
+	//Destructeur
+	~CPoint();
 
 	//fonctions membres
 	
