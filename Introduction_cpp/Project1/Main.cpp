@@ -6,21 +6,12 @@ using namespace std;
 int main()
 {
 	//Création
-	CPoint pPoint(0,0,"Patate");
-	int nX = 0, nY = 0;
-
-
-	cout << "Veuillez entrer la coordonnee en X du point." << endl;
+	CPoint pPoint(8,9,"Patate");
 	
-	cin >> nX;
-	pPoint.setnX(nX);
+	CPoint tabPoint[100];
 
-	cout << "Veuillez entrer la coordonnee en Y du point." << endl;
-
-	cin >> nY;
-	pPoint.setnY(nY);
-
-	cout << "Notre point a pour coordonnees : X = " << pPoint.getnX() << " Y = " << pPoint.getnY() << " et pour nom : " << pPoint.m_strType << endl;
+	for (int i = 0; i < 100;i++)
+		tabPoint[i] = pPoint;
 
 	return 0;
 }

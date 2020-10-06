@@ -19,16 +19,11 @@ public:
 	//Constructeurs
 	CPoint();
 	CPoint(int nX, int nY, string m_strType);
+
 	//fonctions membres
-	void affichePoint() const;
+	void deplacePoint(int nX, int nY);
 
-	/*inline void init()
-	{
-		m_nX=0;
-		m_nY=0;
-	}*/
-
-	//Accesseurs
+	//Assesseurs
 	int getnX()const;
 	int getnY()const;
 

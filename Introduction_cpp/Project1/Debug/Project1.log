@@ -1,2 +1,2 @@
 ﻿  Main.cpp
-  Project1.vcxproj -> C:\Data\Ludus\Troisième Année\Algorithme\Cours\Intro_cpp\Introduction_cpp\Debug\Introduction_cpp.exe
+C:\Data\Ludus\Troisième Année\Algorithme\Cours\Intro_cpp\Introduction_cpp\Project1\Main.cpp(11,36): error C3074:  un tableau ne peut pas être initialisé avec un initialiseur entre parenthèses

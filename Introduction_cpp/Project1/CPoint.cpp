@@ -15,6 +15,12 @@ CPoint::CPoint(int nX, int nY, string m_strType)
 	this->m_strType = m_strType;
 }
 
+void CPoint::deplacePoint(int nX, int nY)
+{
+	this->setnX(nX);
+	this->setnY(nY);
+}
+
 //Accesseurs
 int CPoint::getnX() const
 {
