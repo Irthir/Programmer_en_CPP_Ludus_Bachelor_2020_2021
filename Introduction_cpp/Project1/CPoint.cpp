@@ -1,11 +1,11 @@
 #include "CPoint.h"
 
 //Les constructeurs
-CPoint::CPoint()
+CPoint::CPoint(int nX,int nY)
 {
-	this->setnX(0);
-	this->setnY(0);
-	this->m_strType = "pivot";
+	this->setnX(nX);
+	this->setnY(nY);
+	this->m_strType = "Defaut";
 }
 
 CPoint::CPoint(int nX, int nY, string m_strType)
@@ -17,11 +17,21 @@ CPoint::CPoint(int nX, int nY, string m_strType)
 
 void CPoint::deplacePoint(int nX, int nY)
 {
-	this->setnX(nX);
-	this->setnY(nY);
+	this->m_nX += nX;
+	this->m_nY += nY;
 }
 
-//Accesseurs
+bool CPoint::confondPoint(CPoint autrePoint)
+{
+	if (this->m_nX == autrePoint.getnX() && this->m_nY == autrePoint.getnY())
+		return true;
+	else 
+		return false;
+
+	//Pour simplifier on peut aussi écrire : return (this->m_nX == autrePoint.getnX() && this->m_nY == autrePoint.getnY());
+}
+
+//Assesseurs
 int CPoint::getnX() const
 {
 	return this->m_nX;
@@ -30,6 +40,11 @@ int CPoint::getnX() const
 int CPoint::getnY() const
 {
 	return this->m_nY;
+}
+
+string CPoint::getstrType() const
+{
+	return this->m_strType;
 }
 
 //Mutateurs
