@@ -22,6 +22,9 @@ void CPoint::deplacePoint(int nX, int nY)
 }
 
 bool CPoint::confondPoint(CPoint &autrePoint)
+//BUT : Comparer deux points et voir si ils sont confondus.
+//ENTREE : Les références des deux points.
+//SORTIE : Vrai si ils sont confondus, Faux le cas échéant.
 {
 	if (this->m_nX == autrePoint.m_nX && this->m_nY == autrePoint.m_nY)
 		return true;

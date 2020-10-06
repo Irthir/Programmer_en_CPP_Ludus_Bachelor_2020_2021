@@ -25,7 +25,6 @@ int main()
 
 	cout << pPoint.confondPoint(pPoing) << endl;
 
-
 	cout << pPoint.confondPoint(pPoint) << endl;
 
 	cout << "Mon point 1 a pour position : X = " << pPoint.getnX() << " Y = " << pPoint.getnY() << " et pour type : " << pPoint.getstrType() << "." << endl;
