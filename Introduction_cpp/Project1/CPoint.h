@@ -21,8 +21,12 @@ public:
 	CPoint(int nX, int nY, string m_strType);
 
 	//fonctions membres
+	
+	//procédure déplace point
 	void deplacePoint(int nX, int nY);
-	bool confondPoint(CPoint autrePoint);
+
+	//méthode confondpoint
+	bool confondPoint(CPoint &autrePoint);
 
 	//Assesseurs
 	int getnX()const;

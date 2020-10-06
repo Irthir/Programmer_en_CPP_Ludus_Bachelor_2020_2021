@@ -21,9 +21,9 @@ void CPoint::deplacePoint(int nX, int nY)
 	this->m_nY += nY;
 }
 
-bool CPoint::confondPoint(CPoint autrePoint)
+bool CPoint::confondPoint(CPoint &autrePoint)
 {
-	if (this->m_nX == autrePoint.getnX() && this->m_nY == autrePoint.getnY())
+	if (this->m_nX == autrePoint.m_nX && this->m_nY == autrePoint.m_nY)
 		return true;
 	else 
 		return false;

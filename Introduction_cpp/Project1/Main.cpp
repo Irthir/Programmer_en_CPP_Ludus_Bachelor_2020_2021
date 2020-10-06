@@ -23,5 +23,8 @@ int main()
 
 	cout << pPoint.confondPoint(pPoing) << endl;
 
+
+	cout << pPoint.confondPoint(pPoint) << endl;
+
 	return 0;
 }
